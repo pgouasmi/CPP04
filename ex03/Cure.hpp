@@ -15,15 +15,16 @@
 
 #include "./AMateria.hpp"
 
-class cure : public AMateria
+class Cure : public AMateria
 {
 private:
 	/* data */
 public:
-	cure(std::string const &type);
-	cure(const cure &obj);
-	cure &operator=(const cure &obj);
-	virtual ~cure();
+	Cure();
+	Cure(std::string const &type);
+	Cure(const Cure &obj);
+	Cure &operator=(const Cure &obj);
+	virtual ~Cure();
 
 	AMateria *clone() const;
 	void	use(ICharacter &target);

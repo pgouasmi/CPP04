@@ -13,35 +13,41 @@
 #include "./Ice.hpp"
 #include "ICharacter.hpp"
 
-ice::ice(std::string const &type) : AMateria(type)
+
+Ice::Ice()
+{
+	this->_type = "ice";
+}
+
+Ice::Ice(std::string const &type) : AMateria(type)
 {
 	this->_type = type;
 }
 
-ice::ice(const ice &obj) : AMateria(obj)
+Ice::Ice(const Ice &obj) : AMateria(obj)
 {
 	*this = obj;
 }
 
-ice &ice::operator=(const ice &obj)
+Ice &Ice::operator=(const Ice &obj)
 {
 	this->_type = obj.getType();
 	return *this;
 }
 
-ice::~ice()
+Ice::~Ice()
 {
 
 }
 
-AMateria *ice::clone() const
+AMateria *Ice::clone() const
 {
-	ice *res = new ice("ice");
-	*res = *this;
+	Ice *res = new Ice("ice");
+	// *res = *this;
 	return res;
 }
 
-void ice::use(ICharacter &target)
+void Ice::use(ICharacter &target)
 {
 	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }

@@ -29,14 +29,18 @@ HEADERS =	AMateria.hpp \
 			ICharacter.hpp \
 			Cure.hpp \
 			Ice.hpp \
-			Character.hpp
+			Character.hpp \
+			IMateriaSource.hpp \
+			MateriaSource.hpp
 
 FILES =		main \
 			AMateria \
 			Cure \
 			Ice \
 			ICharacter \
-			Character
+			Character \
+			IMateriaSource \
+			MateriaSource
 
 
 OBJS = $(addsuffix .o, $(addprefix Objects/, $(FILES)))

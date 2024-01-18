@@ -15,15 +15,16 @@
 
 #include "./AMateria.hpp"
 
-class ice : public AMateria
+class Ice : public AMateria
 {
 private:
 	/* data */
 public:
-	ice(std::string const &type);
-	ice(const ice &obj);
-	ice &operator=(const ice &obj);
-	virtual ~ice();
+	Ice();
+	Ice(std::string const &type);
+	Ice(const Ice &obj);
+	Ice &operator=(const Ice &obj);
+	virtual ~Ice();
 
 	AMateria *clone() const;
 	void	use(ICharacter &target);
