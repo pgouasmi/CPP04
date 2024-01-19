@@ -41,7 +41,7 @@ Cure::~Cure()
 
 AMateria *Cure::clone() const
 {
-	Cure *res = new Cure("Cure");
+	Cure *res = new Cure("cure");
 	// *res = *this;
 	return res;
 }

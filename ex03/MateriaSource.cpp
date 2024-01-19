@@ -33,7 +33,7 @@ MateriaSource& MateriaSource::operator=(const MateriaSource &obj)
 MateriaSource::~MateriaSource()
 {
 	for (size_t i = 0; i < 4; i++)
-		delete this->_source[0];
+		delete this->_source[i];
 }
 
 void	MateriaSource::learnMateria(AMateria *m)
@@ -46,8 +46,8 @@ void	MateriaSource::learnMateria(AMateria *m)
 		std::cout << "Materia Source is already full" << std::endl;
 	else
 	{
-		std::cout << _source[i]->getType() << std::endl;
-		this->_source[i] = m->clone();
+		// std::cout << _source[i]->getType() << std::endl;
+		this->_source[i] = m;
 	}
 }
 
@@ -57,9 +57,9 @@ AMateria *MateriaSource::createMateria(std::string const &type)
 
 	while (i < 4 && this->_source[i] && this->_source[i]->getType() != type)
 		i++;
-	if (i == 3 && this->_source[i] && this->_source[i]->getType() != type)
+	if ((i == 3 && this->_source[i] && this->_source[i]->getType() != type) || !this->_source[i])
 	{
-		std::cout << "Unknown type" << std::endl;
+		std::cout << "Unknown type `" << type << "\'" << std::endl;
 		return NULL;
 	}
 	return this->_source[i]->clone();

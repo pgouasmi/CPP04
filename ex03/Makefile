@@ -37,9 +37,7 @@ FILES =		main \
 			AMateria \
 			Cure \
 			Ice \
-			ICharacter \
 			Character \
-			IMateriaSource \
 			MateriaSource
 
 
