@@ -45,10 +45,7 @@ void	MateriaSource::learnMateria(AMateria *m)
 	if (i == 3 && this->_source[i])
 		std::cout << "Materia Source is already full" << std::endl;
 	else
-	{
-		// std::cout << _source[i]->getType() << std::endl;
 		this->_source[i] = m;
-	}
 }
 
 AMateria *MateriaSource::createMateria(std::string const &type)

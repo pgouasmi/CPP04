@@ -48,10 +48,21 @@ Character::~Character()
 void Character::equip(AMateria *m)
 {
 	size_t i = 0;
-	while (i < 4 && this->_inventory[i])
+	while (i < 3 && this->_inventory[i])
+	{
+		if (this->_inventory[i] == m)
+		{
+			std::cerr << "This materia " << m->getType() << " is already equipped" << std::endl;
+			return ;
+		}
 		i++;
-	if (i == 3 && this->_inventory[i])
+	}
+	std::cout << i << std::endl;
+	if (i == 3 && this->_inventory[i] != NULL)
+	{
 		std::cout << "Materia inventory is full" << std::endl;
+		delete m;
+	}
 	else
 		this->_inventory[i] = m;
 }
