@@ -43,7 +43,7 @@ void	MateriaSource::learnMateria(AMateria *m)
 	while (i < 4 && this->_source[i])
 		i++;
 	if (i == 3 && this->_source[i])
-		std::cout << "Materia Source is already full" << std::endl;
+		std::cout << "Materia Source is already full, can not learn materia " << m->getType() << m << std::endl;
 	else
 		this->_source[i] = m;
 }
@@ -56,7 +56,7 @@ AMateria *MateriaSource::createMateria(std::string const &type)
 		i++;
 	if ((i == 3 && this->_source[i] && this->_source[i]->getType() != type) || !this->_source[i])
 	{
-		std::cout << "Unknown type `" << type << "\'" << std::endl;
+		std::cout << "Unknown type `" << type << "\'\n" << std::endl;
 		return NULL;
 	}
 	return this->_source[i]->clone();
