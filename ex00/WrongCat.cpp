@@ -36,7 +36,7 @@ WrongCat &WrongCat::operator=(const WrongCat &obj)
 	return *this;
 }
 
-// void	WrongCat::makeSound() const
-// {
-// 	std::cout << "WrongCat : Photosynthesis" << std::endl;
-// }
+ void	WrongCat::makeSound() const
+ {
+ 	std::cout << "WrongCat : bruh" << std::endl;
+ }

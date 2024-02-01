@@ -19,15 +19,11 @@
 
 class ICharacter
 {
-private:
-	std::string _name;
 public:
 	virtual ~ICharacter() {};
 	virtual std::string const & getName() const = 0;
 	virtual void equip(AMateria *a) = 0;
 	virtual void unequip(int idx) = 0;
 	virtual void use(int idx, ICharacter& target) = 0;
-	virtual AMateria *getMateria(int idx) const = 0;
-	virtual int reequip(Floor &obj) = 0;
 };
 

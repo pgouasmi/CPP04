@@ -14,13 +14,13 @@
 
 Cat::Cat()
 {
-	std::cout << "Default Cat constructor called" << std::endl;
+//	std::cout << "Default Cat constructor called" << std::endl;
 	this->_type = "Cat";
 }
 
 Cat::~Cat()
 {
-	std::cout << "Default Cat destrucor called" << std::endl;
+//	std::cout << "Default Cat destrucor called" << std::endl;
 }
 
 Cat::Cat(const Cat &obj)
@@ -31,7 +31,7 @@ Cat::Cat(const Cat &obj)
 
 Cat &Cat::operator=(const Cat &obj)
 {
-	std::cout << "Cat assignment operator called" << std::endl;
+//	std::cout << "Cat assignment operator called" << std::endl;
 	this->_type = obj.getType();
 	return *this;
 }

@@ -31,6 +31,8 @@ public:
     Cell    *getList();
     size_t  lstsize();
     void    deletesingle(const AMateria *m);
+	int		reequip(ICharacter *obj);
+	AMateria	*getMateria(ICharacter *obj);
 
 private:
     Cell  *_lst;

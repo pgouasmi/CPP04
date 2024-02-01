@@ -14,23 +14,23 @@
 
 Dog::Dog()
 {
-	std::cout << "Dog default constructor called" << std::endl;
+//	std::cout << "Dog default constructor called" << std::endl;
 	this->_type = "Dog";
 }
 Dog::~Dog()
 {
-	std::cout << "Dog Default destructor called" << std::endl;
+//	std::cout << "Dog Default destructor called" << std::endl;
 }
 
 Dog::Dog(const Dog &obj)
 {
-	std::cout << "Dog copy constructor called" << std::endl;
+//	std::cout << "Dog copy constructor called" << std::endl;
 	*this = obj;
 }
 
 Dog &Dog::operator=(const Dog &obj)
 {
-	std::cout << "Dog assignment operator called" << std::endl;
+//	std::cout << "Dog assignment operator called" << std::endl;
 	this->_type = obj.getType();
 	return *this;
 }

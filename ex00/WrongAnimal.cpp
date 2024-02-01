@@ -37,7 +37,7 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &obj)
 
 void	WrongAnimal::makeSound() const
 {
-	std::cout << "Photosynthesis" << std::endl;
+	std::cout << "Wrong Animal : Photosynthesis" << std::endl;
 }
 
 std::string WrongAnimal::getType() const

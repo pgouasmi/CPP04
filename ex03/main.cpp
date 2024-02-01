@@ -20,40 +20,38 @@ int main()
 {
 	Floor *floor = new Floor();
 	IMateriaSource* src = new MateriaSource();
+
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
 
 	ICharacter* me = new Character("me");
 
-	AMateria* tmp;
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
+	AMateria* tmp0;
+	AMateria* tmp1;
+	AMateria* tmp2;
+	AMateria* tmp3;
+	AMateria* tmp4;
+	AMateria* tmp5;
 
-	floor->addback(me->getMateria(1));
+	tmp0 = src->createMateria("ice");
+	me->equip(tmp0);
+	me->equip(tmp0);
+	tmp1 = src->createMateria("cure");
+	me->equip(tmp1);
+
+	floor->addback(tmp1);
 	me->unequip(1);
-	floor->addback(me->getMateria(0));
+	floor->addback(tmp0);
 	me->unequip(0);
 
-	if (me->reequip(*floor) != 0)
-	{
-		std::cout << "\nEOF detected. Exiting the program" << std::endl;
-		delete me;
-		delete floor;
-		delete src;
-		return 1;
-	}
-
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
-	tmp = src->createMateria("fire");
-	me->equip(tmp);
+	tmp2 = src->createMateria("ice");
+	me->equip(tmp2);
+	tmp3 = src->createMateria("ice");
+	me->equip(tmp3);
+	tmp4 = src->createMateria("cure");
+	me->equip(tmp4);
+	tmp5 = src->createMateria("fire");
+	me->equip(tmp5);
 
 	ICharacter* bob = new Character("bob");
 	me->use(0, *bob);

@@ -28,8 +28,8 @@ public:
 	WrongAnimal(const WrongAnimal &obj);
 	virtual ~WrongAnimal();
 	WrongAnimal &operator=(const WrongAnimal &obj);
-	virtual void makeSound() const;
-	virtual std::string getType() const;
+	void makeSound() const;
+	std::string getType() const;
 };
 
 #endif

@@ -33,21 +33,25 @@ int main()
 			delete arr[k];
 		}
 	}
-	std::cout << std::endl;
+
+//	std::cout << std::endl;
 	{
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	// const Animal* test = new Cat();
+	Animal* j = new Dog();
+	Cat* i = new Cat();
+	Cat* test = new Cat();
 
-
-	// i->setDogIdea("TEST", 1);
-	// // test = i;
-	// // std::cout << test->_brain->getIdea(0) << std::endl;
-	// // delete i;
-	// // std::cout << test->_brain->getIdea(0);
+	*test = *i;
+	i->setCatIdea("BRUH", 1);
+	std::cout << i->getCatIdea(1) << std::endl;
+	i->setCatIdea("TEST", 1);
+	std::cout << i->getCatIdea(1) << std::endl;
+	std::cout << i->getCatIdea(21) << std::endl;
+	delete i;
+	delete test;
+//	std::cout << test->_brain->getIdea(0);
 
 	delete j;//should not create a leak
-	delete i;
+//	delete i;
 	}
 
 }

@@ -32,15 +32,8 @@ int main()
 	std::cout << lol->getType() <<std::endl;
 	lol->makeSound();
 
-	// const Cat* test = new Animal();
-	// std::cout << test->getType() << std::endl;
-	// test->makeSound();
-
 	const WrongAnimal* wrong = new WrongCat();
 	wrong->makeSound();
-
-	Animal bruh(*meta);
-	bruh.makeSound();
 
 	delete meta;
 	delete i;
